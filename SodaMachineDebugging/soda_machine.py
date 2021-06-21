@@ -3,22 +3,25 @@ import coins
 import user_interface
 
 
+
 class SodaMachine:
     def __init__(self):
         self.register = []
         self.inventory = []
-        self.coins
+        self.coins = []
+        self.fill_inventory()
+        self.fill_register()
 
     def fill_register(self):
         """Method will fill SodaMachine's register with certain amounts of each coin when called."""
         for index in range(8):
-        self.register.append(coins.Quarter())
+         self.coins.append(coins.Quarter())
         for index in range(10):
-        self.register.append(coins.Dime())
+         self.register.append(coins.Dime())
         for index in range(20):
-        self.register.append(coins.Nickel())
+         self.register.append(coins.Nickel())
         for index in range(50):
-        self.register.append(coins.Penny())
+         self.register.append(coins.Penny())
 
     def fill_inventory(self):
         """Method will fill SodaMachine's cans list with certain amounts of each can when called."""
@@ -41,7 +44,7 @@ class SodaMachine:
 
         selected_soda = self.get_inventory_soda(selected_soda_name)
 
-        customer_payment = customer.gather_coins_from_wallet(selected_soda_name)
+        customer_payment = customer.gather_coins_from_wallet(selected_soda)
 
         self.calculate_transaction(customer_payment, selected_soda_name, customer)
 
@@ -135,5 +138,5 @@ class SodaMachine:
 
     def deposit_coins_into_register(self, coin_list):
         """Takes in list of coins as argument, adds each coin from list to the register"""
-        for coin in coins_list:
-            self.register.append(coins_list)
+        for coins in coin_list:
+            self.register.append(coin_list)

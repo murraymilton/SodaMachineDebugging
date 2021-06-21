@@ -1,7 +1,8 @@
 class Coin: # Correct class misspelling to resolved bug in class Class
-    def __init__(self, name, value):
+    def __init__(self, name, value, ):
         self.value = value
         self.name = name
+        # self.coin = coin
 
 
 class Dime(Coin):
